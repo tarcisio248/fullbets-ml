@@ -216,7 +216,7 @@ footer{{text-align:center;color:var(--muted);font-size:.7rem;padding:20px;border
 
 <script>
 const DADOS = {json_str};
-const S = DADOS.sinais;
+const S = DADOS.sinais.map((s,i) => ({{...s, _idx:i}}));
 let tabAtual = 'apto';
 
 function setTab(btn) {{
@@ -239,7 +239,7 @@ function render() {{
   if (!lista.length) {{ grid.innerHTML = '<div class="empty">Nenhum jogo encontrado.</div>'; return; }}
   grid.innerHTML = lista.map(s => {{
     const apto = String(s.APTO||'').toUpperCase() === 'SIM';
-    const idx  = S.indexOf(s);
+    const idx  = s._idx;
     const data = s.Data ? String(s.Data).slice(0,10).split('-').reverse().join('/') : '—';
     const hora = s.Hora ? String(s.Hora).slice(0,5) : '—';
     const m10  = s.m10 != null ? s.m10.toFixed(3) : '—';
