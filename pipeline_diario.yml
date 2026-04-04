@@ -1,0 +1,56 @@
+name: FULLBETS Pipeline Diário
+
+on:
+  # Roda todo dia às 8h horário de Brasília (11:00 UTC)
+  schedule:
+    - cron: '0 11 * * *'
+
+  # Permite rodar manualmente pelo GitHub (botão "Run workflow")
+  workflow_dispatch:
+
+jobs:
+  scanner:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Baixar o código do repositório
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      # 2. Configurar Python 3.11
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      # 3. Instalar dependências
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      # 4. Criar config.py com o token (vem dos Secrets do GitHub)
+      - name: Criar config.py
+        run: |
+          echo "TOKEN = \"${{ secrets.FULLBETS_TOKEN }}\"" > config.py
+
+      # 5. Rodar o scanner pré-live (Módulo C)
+      # Gera sinais_hoje.json para a GitHub Page
+      - name: Rodar scanner
+        run: python pipeline_fullbets.py --modulo C
+        continue-on-error: true
+
+      # 6. Publicar sinais na GitHub Page
+      - name: Publicar sinais no GitHub Pages
+        run: python gerar_pagina.py
+        continue-on-error: true
+
+      # 7. Commit e push dos arquivos gerados (sinais + página)
+      - name: Commit e push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "FULLBETS Bot"
+          git add docs/index.html docs/sinais.json || true
+          git diff --quiet && git diff --staged --quiet || \
+            git commit -m "Sinais $(date +'%Y-%m-%d %H:%M') [bot]"
+          git push
+        continue-on-error: true

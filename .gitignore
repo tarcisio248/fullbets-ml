@@ -1,0 +1,32 @@
+# ── Token e configurações sensíveis ──────────────────────────────
+config.py
+.env
+*.env
+
+# ── Base de dados (privada e grande demais) ───────────────────────
+*.xlsx
+*.xls
+*.csv
+
+# ── Modelos treinados (gerados localmente) ────────────────────────
+*.pkl
+
+# ── Checkpoints e temporários ────────────────────────────────────
+*_checkpoint.txt
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── PyCharm ───────────────────────────────────────────────────────
+.idea/
+*.iml
+
+# ── Virtual environment ───────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── OS ────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

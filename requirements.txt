@@ -1,0 +1,6 @@
+pandas
+openpyxl
+requests
+scikit-learn
+joblib
+numpy
