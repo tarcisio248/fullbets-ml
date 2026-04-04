@@ -56,8 +56,7 @@ ARQUIVO_LOG     = "model_log.csv"            # histórico de AUC/ROI por treino
 ARQUIVO_SINAIS  = "sinais_hoje.xlsx"         # output do scanner (módulo C)
 
 # Thresholds ML ─────────────────────────────────────────────────────
-THRESHOLD_WATCH   = 0.50   # prob_SH ≥ este valor → watchlist (módulo C)
-THRESHOLD_ENTRADA = 0.55   # prob_final ≥ este → alerta (módulo D, fallback)
+THRESHOLD_WATCH   = 0.50   # prob_SH ≥ este valor → incluir na planilha
 
 # Thresholds operacionais por janela (confirmados pelo walk-forward)
 # Target: Gol_ate_min35 — entrada no minuto N, saída no min35 com red
@@ -65,6 +64,16 @@ THRESHOLD_OPERACIONAL = {
     5 : 0.62,   # ROI +8.3%  | 10/13 semanas +
     10: 0.55,   # ROI +14.0% | 13/13 semanas + ← janela principal
     15: 0.52,   # ROI +22.9% | 13/13 semanas +
+}
+
+# ── Critérios mínimos de entrada (decisão manual) ─────────────────
+# Estes critérios geram a coluna APTO na planilha sinais_hoje.xlsx
+# Você decide a entrada final — o sistema apenas sinaliza o que atende.
+CRITERIOS_APTO = {
+    "m10_min"      : 0.55,   # prob_m10 ≥ threshold walk-forward
+    "m15_min"      : 0.52,   # prob_m15 ≥ threshold walk-forward
+    "lg_c_min"     : 100,    # LG_C ≥ 100 (liga com histórico suficiente)
+    "odd_emp_min"  : 3.5,    # Odd_Emp ≥ 3.5 (não excessivamente favorito)
 }
 
 # ── Controle de retreino ──────────────────────────────────────────
@@ -865,31 +874,51 @@ def modulo_C():
             th_watch_op    = THRESHOLD_OPERACIONAL.get(mod_principal, THRESHOLD_WATCH)
             status = "WATCH" if prob_principal >= th_principal else "SKIP"
 
+            # ── Critérios mínimos de entrada (coluna APTO) ──────────
+            m10_val   = probs.get(10, 0) or 0
+            m15_val   = probs.get(15, 0) or 0
+            lg_c_val  = campos.get("SH_LG_Score_C") or 0
+            odd_emp   = campos.get("SH_Odd_Empate") or 0
+
+            falhas = []
+            if m10_val  < CRITERIOS_APTO["m10_min"]:
+                falhas.append(f"m10={m10_val:.2f}<{CRITERIOS_APTO['m10_min']}")
+            if m15_val  < CRITERIOS_APTO["m15_min"]:
+                falhas.append(f"m15={m15_val:.2f}<{CRITERIOS_APTO['m15_min']}")
+            if lg_c_val < CRITERIOS_APTO["lg_c_min"]:
+                falhas.append(f"LG_C={lg_c_val}<{CRITERIOS_APTO['lg_c_min']}")
+            if odd_emp  < CRITERIOS_APTO["odd_emp_min"]:
+                falhas.append(f"Odd_Emp={odd_emp:.1f}<{CRITERIOS_APTO['odd_emp_min']}")
+
+            apto   = "SIM" if not falhas else "NÃO"
+            motivo = "OK" if not falhas else " | ".join(falhas)
+
             sinais.append({
                 "Data"       : data_alvo,
                 "Hora"       : horario,
                 "Liga"       : liga,
                 "Casa"       : home,
                 "Visitante"  : away,
-                "Match_ID"   : sr_id,
-                "Sherlock_ID": sh_id,
                 # Probabilidades pré-live das 3 janelas
-                "prob_m5"    : probs.get(5),
-                "prob_m10"   : probs.get(10),
-                "prob_m15"   : probs.get(15),
-                "prob_principal": prob_principal,
-                "janela_op"  : mod_principal,
-                "th_op"      : th_watch_op,
-                "status"     : status,
-                # Contexto SH para o alerta live
+                "m5"         : probs.get(5),
+                "m10"        : probs.get(10),
+                "m15"        : probs.get(15),
+                # Critérios Sherlock
                 "LG_C"       : campos.get("SH_LG_Score_C"),
                 "LG_V"       : campos.get("SH_LG_Score_V"),
                 "H_Score_C"  : campos.get("SH_H_Score_C"),
-                "Odd_Emp"    : campos.get("SH_Odd_Empate"),
                 "Odd_Casa"   : campos.get("SH_Odd_Casa"),
+                "Odd_Emp"    : campos.get("SH_Odd_Empate"),
+                "Odd_Visit"  : campos.get("SH_Odd_Visit"),
+                # Decisão
+                "APTO"       : apto,
+                "MOTIVO"     : motivo,
+                # IDs internos (para referência)
+                "Match_ID"   : sr_id,
+                "Sherlock_ID": sh_id,
             })
 
-            flag = "WATCH" if status == "WATCH" else "·    "
+            flag = "✔ APTO" if apto == "SIM" else "·     "
             p10  = f"{probs.get(10, 0):.3f}" if 10 in probs else "  —  "
             p15  = f"{probs.get(15, 0):.3f}" if 15 in probs else "  —  "
             print(f"  {flag}  [{liga}] {home} vs {away}  "
@@ -901,20 +930,28 @@ def modulo_C():
         print("  Nenhum sinal gerado.")
         return
 
-    df_sinais = pd.DataFrame(sinais).sort_values("prob_principal", ascending=False)
+    df_sinais = pd.DataFrame(sinais).sort_values("m10", ascending=False)
+
+    # APTO primeiro, depois por m10 desc
+    df_sinais = pd.concat([
+        df_sinais[df_sinais["APTO"] == "SIM"].sort_values("m10", ascending=False),
+        df_sinais[df_sinais["APTO"] == "NÃO"].sort_values("m10", ascending=False),
+    ]).reset_index(drop=True)
+
     df_sinais.to_excel(ARQUIVO_SINAIS, index=False)
 
-    n_watch = (df_sinais["status"] == "WATCH").sum()
-    print(f"\n  {len(sinais)} jogos analisados | {n_watch} em WATCH")
+    n_apto = (df_sinais["APTO"] == "SIM").sum()
+    print(f"\n  {len(sinais)} jogos analisados | {n_apto} APTOS para entrada")
     print(f"  Sinais salvos → {ARQUIVO_SINAIS}")
 
-    print(f"\n  TOP 5 (modelo min{mod_principal}):")
+    print(f"\n  TOP 5 APTOS (modelo min10):")
     print(f"  {'Liga':<20} {'Casa':<20} {'Vis':<20} {'m5':>6} {'m10':>6} {'m15':>6}")
     print("  " + "─"*76)
-    for _, r in df_sinais.head(5).iterrows():
-        m5  = f"{r['prob_m5']:.3f}"  if r['prob_m5']  is not None else "  —  "
-        m10 = f"{r['prob_m10']:.3f}" if r['prob_m10'] is not None else "  —  "
-        m15 = f"{r['prob_m15']:.3f}" if r['prob_m15'] is not None else "  —  "
+    top5 = df_sinais[df_sinais["APTO"] == "SIM"].head(5)
+    for _, r in top5.iterrows():
+        m5  = f"{r['m5']:.3f}"  if r['m5']  is not None else "  —  "
+        m10 = f"{r['m10']:.3f}" if r['m10'] is not None else "  —  "
+        m15 = f"{r['m15']:.3f}" if r['m15'] is not None else "  —  "
         print(f"  {r['Liga']:<20} {r['Casa']:<20} {r['Visitante']:<20} "
               f"{m5:>6} {m10:>6} {m15:>6}")
 
@@ -1131,9 +1168,9 @@ def main():
         description="FULLBETS Pipeline Over 0.5 HT"
     )
     parser.add_argument(
-        "--modulo", default="ABCD",
-        help="Módulos a executar: A=coleta, B=treino, C=scanner, D=monitor. "
-             "Pode combinar: AB, AC, BCD, etc. Default: ABCD"
+        "--modulo", default="ABC",
+        help="Módulos a executar: A=coleta, B=treino, C=scanner. "
+             "Pode combinar: AB, AC, BC, etc. Default: ABC"
     )
     parser.add_argument(
         "--forcar-treino", action="store_true",
@@ -1154,7 +1191,6 @@ def main():
     try:
         if "A" in modulos:
             novas = modulo_A()
-            # Se tiver B logo depois e houver dados novos, garante re-treino
             if "B" in modulos and novas > 0:
                 forcar = True
 
@@ -1163,9 +1199,6 @@ def main():
 
         if "C" in modulos:
             modulo_C()
-
-        if "D" in modulos:
-            modulo_D()
 
     except RuntimeError as e:
         print(f"\n  ERRO CRÍTICO: {e}")
