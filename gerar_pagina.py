@@ -256,14 +256,14 @@ function render() {{
   grid.innerHTML = lista.map(s => {{
     const apto = String(s.APTO||'').toUpperCase() === 'SIM';
     const idx  = s._idx;
-    const data = s.Data ? String(s.Data).slice(0,10).split('-').reverse().join('/') : '—';
-    const hora = s.Hora ? String(s.Hora).slice(0,5) : '—';
-    const m10  = s.m10 != null ? s.m10.toFixed(3) : '—';
-    const m15  = s.m15 != null ? s.m15.toFixed(3) : '—';
-    const m5   = s.m5  != null ? s.m5.toFixed(3)  : '—';
-    const lgc  = (s.LG_C != null && !isNaN(s.LG_C)) ? Math.round(s.LG_C) : '—';
-    const hsc  = (s.H_Score_C != null && !isNaN(s.H_Score_C)) ? Math.round(s.H_Score_C) : '—';
-    const emp  = s.Odd_Emp != null ? parseFloat(s.Odd_Emp).toFixed(1) : '—';
+    const data = s.Data ? String(s.Data).slice(0,10).split('-').reverse().join('/') : '--';
+    const hora = s.Hora ? String(s.Hora).slice(0,5) : '--';
+    const m10  = s.m10 != null ? s.m10.toFixed(3) : '--';
+    const m15  = s.m15 != null ? s.m15.toFixed(3) : '--';
+    const m5   = s.m5  != null ? s.m5.toFixed(3)  : '--';
+    const lgc  = (s.LG_C != null && !isNaN(s.LG_C)) ? Math.round(s.LG_C) : '--';
+    const hsc  = (s.H_Score_C != null && !isNaN(s.H_Score_C)) ? Math.round(s.H_Score_C) : '--';
+    const emp  = s.Odd_Emp != null ? parseFloat(s.Odd_Emp).toFixed(1) : '--';
     return `<div class="card ${{apto?'apto':'napt'}}" onclick="openModal(${{idx}})">
       <div class="card-top">
         <span class="liga-tag">${{s.Liga||'?'}}</span>
@@ -291,14 +291,14 @@ function barColor(v) {{
 function openModal(idx) {{
   const s = S[idx];
   const apto = String(s.APTO||'').toUpperCase() === 'SIM';
-  const data = s.Data ? String(s.Data).slice(0,10).split('-').reverse().join('/') : '—';
-  const hora = s.Hora ? String(s.Hora).slice(0,5) : '—';
-  const lgc  = (s.LG_C  != null && !isNaN(s.LG_C))  ? Math.round(s.LG_C)  : '—';
-  const lgv  = (s.LG_V  != null && !isNaN(s.LG_V))  ? Math.round(s.LG_V)  : '—';
-  const hsc  = (s.H_Score_C != null && !isNaN(s.H_Score_C)) ? Math.round(s.H_Score_C) : '—';
-  const oc   = s.Odd_Casa  != null ? parseFloat(s.Odd_Casa).toFixed(2)  : '—';
-  const oe   = s.Odd_Emp   != null ? parseFloat(s.Odd_Emp).toFixed(2)   : '—';
-  const ov   = s.Odd_Visit != null ? parseFloat(s.Odd_Visit).toFixed(2) : '—';
+  const data = s.Data ? String(s.Data).slice(0,10).split('-').reverse().join('/') : '--';
+  const hora = s.Hora ? String(s.Hora).slice(0,5) : '--';
+  const lgc  = (s.LG_C  != null && !isNaN(s.LG_C))  ? Math.round(s.LG_C)  : '--';
+  const lgv  = (s.LG_V  != null && !isNaN(s.LG_V))  ? Math.round(s.LG_V)  : '--';
+  const hsc  = (s.H_Score_C != null && !isNaN(s.H_Score_C)) ? Math.round(s.H_Score_C) : '--';
+  const oc   = s.Odd_Casa  != null ? parseFloat(s.Odd_Casa).toFixed(2)  : '--';
+  const oe   = s.Odd_Emp   != null ? parseFloat(s.Odd_Emp).toFixed(2)   : '--';
+  const ov   = s.Odd_Visit != null ? parseFloat(s.Odd_Visit).toFixed(2) : '--';
 
   document.getElementById('m-liga').textContent  = s.Liga || '?';
   document.getElementById('m-teams').textContent = (s.Casa||'?') + ' \u00d7 ' + (s.Visitante||'?');
@@ -309,8 +309,8 @@ function openModal(idx) {{
     <div class="erow"><span class="el">Entrada</span><span class="ev g">Minuto 10 (0×0 confirmado)</span></div>
     <div class="erow"><span class="el">Sa&iacute;da / Red</span><span class="ev">Minuto 35</span></div>
     <div class="erow"><span class="el">Odd Empate (ref)</span><span class="ev b">${{oe}}</span></div>
-    <div class="erow"><span class="el">Prob min10</span><span class="ev g">${{s.m10 != null ? (s.m10*100).toFixed(1)+'%' : '—'}}</span></div>
-    <div class="erow"><span class="el">Prob min15</span><span class="ev b">${{s.m15 != null ? (s.m15*100).toFixed(1)+'%' : '—'}}</span></div>`;
+    <div class="erow"><span class="el">Prob min10</span><span class="ev g">${{s.m10 != null ? (s.m10*100).toFixed(1)+'%' : '--'}}</span></div>
+    <div class="erow"><span class="el">Prob min15</span><span class="ev b">${{s.m15 != null ? (s.m15*100).toFixed(1)+'%' : '--'}}</span></div>`;
 
   document.getElementById('m-probs').innerHTML = [['m5',s.m5],['m10',s.m10],['m15',s.m15]].map(([lbl,v]) => {{
     if (v == null) return '';
@@ -331,8 +331,8 @@ function openModal(idx) {{
     <div class="iitem"><div class="ilbl">Odd Visitante</div><div class="ival">${{ov}}</div></div>`;
 
   const crits = [
-    ['m10 &ge; 0.55', s.m10 != null && s.m10 >= 0.55, s.m10 != null ? s.m10.toFixed(3) : '—'],
-    ['m15 &ge; 0.52', s.m15 != null && s.m15 >= 0.52, s.m15 != null ? s.m15.toFixed(3) : '—'],
+    ['m10 &ge; 0.55', s.m10 != null && s.m10 >= 0.55, s.m10 != null ? s.m10.toFixed(3) : '--'],
+    ['m15 &ge; 0.52', s.m15 != null && s.m15 >= 0.52, s.m15 != null ? s.m15.toFixed(3) : '--'],
     ['LG_C &ge; 100',  s.LG_C != null && s.LG_C >= 100, lgc],
     ['Odd_Emp &ge; 3.5', s.Odd_Emp != null && s.Odd_Emp >= 3.5, oe],
   ];
