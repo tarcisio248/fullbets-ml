@@ -1443,6 +1443,121 @@ def main():
     except RuntimeError as e:
         print(f"\n  ERRO CRÍTICO: {e}")
         sys.exit(1)
+def modulo_D():
+    """
+    Módulo D — Gerar página e publicar no GitHub Pages automaticamente.
+    Roda gerar_pagina.py, copia index.html para a raiz e faz git push.
+    """
+    sep("MÓDULO D — Publicar página no GitHub Pages")
+
+    import subprocess
+    from pathlib import Path
+
+    pasta = Path(__file__).parent
+
+    # 1. Rodar gerar_pagina.py
+    gerar_py = pasta / "gerar_pagina.py"
+    if not gerar_py.exists():
+        print("  gerar_pagina.py não encontrado — pulando publicação.")
+        return
+
+    print("  Gerando index.html...")
+    r = subprocess.run(
+        [sys.executable, str(gerar_py)],
+        cwd=str(pasta),
+        capture_output=True, text=True
+    )
+    if r.returncode != 0:
+        print(f"  ERRO ao gerar página: {r.stderr[:200]}")
+        return
+    print(f"  {r.stdout.strip()}")
+
+    # 2. Copiar docs/index.html → index.html (raiz)
+    src  = pasta / "docs" / "index.html"
+    dest = pasta / "index.html"
+    if src.exists():
+        import shutil
+        shutil.copy2(src, dest)
+        print(f"  Copiado: docs/index.html → index.html")
+    else:
+        print("  docs/index.html não encontrado — abortando push.")
+        return
+
+    # 3. Git add + commit + push
+    hoje_str = date.today().strftime("%d/%m/%Y")
+    arquivos = ["index.html", "docs/index.html", "docs/sinais.json"]
+
+    print("  Fazendo git add...")
+    subprocess.run(["git", "add"] + arquivos, cwd=str(pasta), capture_output=True)
+
+    print("  Fazendo git commit...")
+    msg = f"Sinais {hoje_str} - auto update"
+    r_commit = subprocess.run(
+        ["git", "commit", "-m", msg],
+        cwd=str(pasta), capture_output=True, text=True
+    )
+    if "nothing to commit" in r_commit.stdout + r_commit.stderr:
+        print("  Nada para commitar — página já está atualizada.")
+        return
+
+    print("  Fazendo git push...")
+    r_push = subprocess.run(
+        ["git", "push", "origin", "main"],
+        cwd=str(pasta), capture_output=True, text=True
+    )
+    if r_push.returncode == 0:
+        print(f"  Publicado com sucesso! → https://tarcisio248.github.io/fullbets-ml/")
+    else:
+        print(f"  ERRO no push: {r_push.stderr[:300]}")
+
+
+# ═══════════════════════════════════════════════════════════════════
+# MAIN
+# ═══════════════════════════════════════════════════════════════════
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="FULLBETS Pipeline Over 0.5 HT"
+    )
+    parser.add_argument(
+        "--modulo", default="ABCD",
+        help="Módulos a executar: A=coleta, B=treino, C=scanner, D=publicar. "
+             "Pode combinar: AB, AC, BC, ABC, etc. Default: ABCD"
+    )
+    parser.add_argument(
+        "--forcar-treino", action="store_true",
+        help="Força re-treino mesmo sem dados novos suficientes"
+    )
+    args = parser.parse_args()
+
+    if not TOKEN or TOKEN == "COLE_SEU_TOKEN_JWT_AQUI":
+        print("ERRO: Cole seu token JWT em TOKEN (linha ~60).")
+        sys.exit(1)
+
+    modulos = args.modulo.upper()
+    forcar  = args.forcar_treino
+
+    sep(f"FULLBETS PIPELINE — {date.today()} — módulos: {modulos}", "═", 60)
+    inicio = time.time()
+
+    try:
+        if "A" in modulos:
+            novas = modulo_A()
+            if "B" in modulos and novas > 0:
+                forcar = True
+
+        if "B" in modulos:
+            modulo_B(forcar=forcar)
+
+        if "C" in modulos:
+            modulo_C()
+
+        if "D" in modulos:
+            modulo_D()
+
+    except RuntimeError as e:
+        print(f"\n  ERRO CRÍTICO: {e}")
+        sys.exit(1)
     except KeyboardInterrupt:
         print("\n  Interrompido pelo usuário.")
 
