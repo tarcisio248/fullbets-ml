@@ -192,15 +192,20 @@ TIMES_LIGAS = {
         "internacional","palmeiras","santos fc","sao paulo fc","sport recife",
         "vasco da gama","fortaleza ec","ceara sc","bahia","cruzeiro",
         "atletico goianiense","corinthians","bragantino","juventude","vitoria",
+        "cuiaba","coritiba","avai","goias","america mineiro",
+        "athletico paranaense","atletico paranaense","remo","tombense",
+        "londrina","vila nova","apparecidense",
     ],
     "Brasileirao B": [
-        "america mineiro","chapecoense","coritiba","criciuma","guarani",
-        "ituano","operario","ponte preta","sampaio correa","tombense",
-        "avai","gonçalves","mirassol","novorizontino","sport",
+        "chapecoense","criciuma","guarani","ituano","operario ferroviario",
+        "ponte preta","sampaio correa","novorizontino","mirassol","nauti co","nautico",
+        "iguatu","coritiba","sport recife","avai","ponte preta",
+        "botafogo sp","sao bernardo","vila nova","remo","londrina",
+        "crb","csavai","aparecida","gama",
     ],
     "HNL": [
         "dinamo zagreb","hajduk split","rijeka","osijek","lokomotiva zagreb",
-        "sibenik","istra","varazdin","gorica","slaven belupo",
+        "sibenik","istra","varazdin","gorica","slaven belupo","slaven koprivnica",
     ],
     "Eliteserien": [
         "bodo/glimt","brann","molde fk","rosenborg","viking fk",
@@ -208,15 +213,15 @@ TIMES_LIGAS = {
     ],
     "Allsvenskan": [
         "malmo ff","djurgarden","ifk goteborg","ifk norrkoping","hammarby",
-        "helsingborg","aik","hacken","orebro","mjallby",
+        "helsingborg","aik","hacken","orebro","mjallby","norrkoping","varnamo",
+        "sirius","elfsborg","kalmar","goteborg",
     ],
     "Colombia": [
         "atletico nacional","millonarios","america de cali","deportivo cali",
         "once caldas","junior","independiente medellin","santa fe",
-    ],
-    "Argentina": [
-        "river plate","boca juniors","racing club","independiente","san lorenzo",
-        "velez sarsfield","estudiantes","talleres","atletico tucuman","colon",
+        "deportes tolima","cucuta deportivo","envigado","la equidad",
+        "rionegro aguilas","patriotas boyaca","jaguares","deportivo pereira",
+        "deportivo pasto","boyaca chico",
     ],
 }
 
@@ -291,12 +296,133 @@ def normalizar(nome: str) -> str:
     return "".join(c for c in nfkd if not unicodedata.combining(c)).lower().strip()
 
 def time_na_liga(nome_time: str):
-    nome = nome_time.lower().strip()
+    """
+    Verifica se um time pertence a alguma liga alvo.
+    Usa match mais restrito para evitar falsos positivos com nomes genéricos.
+    """
+    nome = normalizar(nome_time)
+    if len(nome) < 4:          # nomes muito curtos causam falsos positivos
+        return "", False
     for liga, times in TIMES_LIGAS.items():
         for t in times:
-            if t in nome or nome in t:
+            # Match exato ou nome do time contido no nome completo (com palavra inteira)
+            if t == nome:
+                return liga, True
+            # Evitar match parcial em nomes genéricos curtos (racing, sport, inter, etc.)
+            # Só aceita se o token for >= 6 chars OU for match exato
+            if len(t) >= 6 and (t in nome or nome in t):
                 return liga, True
     return "", False
+
+
+# Mapa de ligas do Sherlock → nomes usados no sistema
+# Usado para identificar a liga real pelo campo competition.league_name do Sherlock
+LIGA_SHERLOCK_MAP = {
+    # Premier League
+    "premier league": "Premier League",
+    "english premier league": "Premier League",
+    # Championship
+    "championship": "Championship",
+    "english championship": "Championship",
+    # League One
+    "league one": "League One",
+    "english league one": "League One",
+    # La Liga
+    "la liga": "La Liga",
+    "laliga": "La Liga",
+    "primera division": "La Liga",
+    # Segunda Division
+    "segunda division": "Segunda Division",
+    "segunda división": "Segunda Division",
+    "laliga 2": "Segunda Division",
+    # Bundesliga
+    "bundesliga": "Bundesliga",
+    "1. bundesliga": "Bundesliga",
+    # 2. Bundesliga
+    "2. bundesliga": "2. Bundesliga",
+    "2. bl": "2. Bundesliga",
+    # Serie A (Italia)
+    "serie a": "Serie A",
+    "italian serie a": "Serie A",
+    # Serie B (Italia)
+    "serie b": "Serie B",
+    "italian serie b": "Serie B",
+    # Ligue 1
+    "ligue 1": "Ligue 1",
+    "french ligue 1": "Ligue 1",
+    # Ligue 2
+    "ligue 2": "Ligue 2",
+    "french ligue 2": "Ligue 2",
+    # Eredivisie
+    "eredivisie": "Eredivisie",
+    "dutch eredivisie": "Eredivisie",
+    # Eerste Divisie
+    "eerste divisie": "Eerste Divisie",
+    "dutch eerste divisie": "Eerste Divisie",
+    # Liga NOS / Primeira Liga
+    "liga nos": "Liga NOS",
+    "primeira liga": "Liga NOS",
+    "liga portugal": "Liga NOS",
+    "liga bwin": "Liga NOS",
+    # Pro League (Bélgica)
+    "pro league": "Pro League",
+    "belgian pro league": "Pro League",
+    "jupiler pro league": "Pro League",
+    # Super Lig (Turquia)
+    "super lig": "Super Lig",
+    "turkish super lig": "Super Lig",
+    # Premiership (Escócia)
+    "premiership": "Premiership",
+    "scottish premiership": "Premiership",
+    # Championship (Escócia)
+    "scottish championship": "Championship",
+    # Brasileirao A
+    "serie a brasil": "Brasileirao A",
+    "brasileirao serie a": "Brasileirao A",
+    "campeonato brasileiro serie a": "Brasileirao A",
+    # Brasileirao B
+    "serie b brasil": "Brasileirao B",
+    "brasileirao serie b": "Brasileirao B",
+    "campeonato brasileiro serie b": "Brasileirao B",
+    # HNL
+    "hnl": "HNL",
+    "supersport hnl": "HNL",
+    "croatian football league": "HNL",
+    # Eliteserien
+    "eliteserien": "Eliteserien",
+    "norwegian eliteserien": "Eliteserien",
+    # Allsvenskan
+    "allsvenskan": "Allsvenskan",
+    "swedish allsvenskan": "Allsvenskan",
+    # Colombia
+    "liga betplay dimayor": "Colombia",
+    "colombian league": "Colombia",
+    "primera a": "Colombia",
+    # Argentina
+    "liga profesional": "Argentina",
+    "primera division argentina": "Argentina",
+    "torneo binance": "Argentina",
+}
+
+LIGAS_VALIDAS = set(TIMES_LIGAS.keys())
+
+
+def liga_do_sherlock(nome_liga_sh: str) -> str:
+    """
+    Converte o nome da liga retornado pelo Sherlock para o nome padronizado do sistema.
+    Retorna string vazia se a liga não for alvo.
+    """
+    if not nome_liga_sh:
+        return ""
+    chave = nome_liga_sh.lower().strip()
+    # Busca direta no mapa
+    if chave in LIGA_SHERLOCK_MAP:
+        return LIGA_SHERLOCK_MAP[chave]
+    # Busca parcial
+    for k, v in LIGA_SHERLOCK_MAP.items():
+        if k in chave or chave in k:
+            return v
+    return ""
 
 def safe(arr, idx, default=None):
     try:
@@ -548,9 +674,12 @@ def lucy_buscar_jogos(data_str: str) -> list:
                 liga_c, ok_c = time_na_liga(j.get("NomeCasa", ""))
                 liga_f, ok_f = time_na_liga(j.get("NomeVisitante", ""))
                 if ok_c or ok_f:
-                    j["_liga"] = liga_c if ok_c else liga_f
-                    j["_data"] = dt
-                    encontrados.append(j)
+                    liga_inferida = liga_c if ok_c else liga_f
+                    # Validar: ambos os times devem pertencer à mesma liga ou pelo menos uma deve ser reconhecida
+                    if liga_inferida in LIGAS_VALIDAS:
+                        j["_liga"] = liga_inferida
+                        j["_data"] = dt
+                        encontrados.append(j)
             total_pag = data.get("numberPages", 1)
             if pagina >= total_pag:
                 break
@@ -841,12 +970,25 @@ def modulo_C():
 
         jogos_liga = []
         for item in lista:
-            home = normalizar(item.get("home", {}).get("name", ""))
-            away = normalizar(item.get("away", {}).get("name", ""))
-            liga_h, ok_h = time_na_liga(home)
-            liga_a, ok_a = time_na_liga(away)
-            if ok_h or ok_a:
-                item["_liga"] = liga_h if ok_h else liga_a
+            home_name = item.get("home", {}).get("name", "")
+            away_name = item.get("away", {}).get("name", "")
+            sh_liga   = item.get("competition", {}).get("league_name", "") if isinstance(item.get("competition"), dict) else ""
+
+            # 1. Tentar mapear pela liga real do Sherlock (mais confiável)
+            liga_real = liga_do_sherlock(sh_liga)
+
+            # 2. Fallback: inferir pelo nome do time (menos confiável)
+            if not liga_real:
+                home_norm = normalizar(home_name)
+                away_norm = normalizar(away_name)
+                liga_h, ok_h = time_na_liga(home_norm)
+                liga_a, ok_a = time_na_liga(away_norm)
+                if ok_h or ok_a:
+                    liga_real = liga_h if ok_h else liga_a
+
+            # Só inclui se a liga for reconhecida como alvo
+            if liga_real and liga_real in LIGAS_VALIDAS:
+                item["_liga"] = liga_real
                 jogos_liga.append(item)
 
         print(f"  Ligas alvo: {len(jogos_liga)} jogos")
