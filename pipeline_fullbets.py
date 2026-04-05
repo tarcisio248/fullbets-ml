@@ -91,137 +91,202 @@ INTERVALO_AO_VIVO = 5 * 60   # segundos entre snapshots Lucy no módulo D
 
 TIMES_LIGAS = {
     "Premier League": [
-        "arsenal","aston villa","bournemouth","brentford","brighton","chelsea",
-        "crystal palace","everton","fulham fc","ipswich","leicester city",
-        "liverpool fc","manchester city","manchester united","newcastle united",
-        "nottingham forest","southampton","tottenham hotspur","west ham","wolverhampton",
+        "arsenal", "aston villa", "bournemouth", "brentford", "brighton",
+        "chelsea", "crystal palace", "everton", "fulham fc", "ipswich",
+        "leicester city", "liverpool fc", "manchester city", "manchester united",
+        "newcastle united", "nottingham forest", "southampton",
+        "tottenham hotspur", "west ham", "wolverhampton",
     ],
     "Championship": [
-        "blackburn rovers","bristol city","burnley","cardiff city","coventry city",
-        "derby county","hull city","leeds united","luton town","middlesbrough",
-        "millwall","norwich city","plymouth argyle","portsmouth","preston north end",
-        "qpr","queens park rangers","sheffield united","sheffield wednesday",
-        "stoke city","sunderland","swansea city","watford","west brom","west bromwich",
+        "blackburn rovers", "bristol city", "burnley", "cardiff city",
+        "coventry city", "derby county", "hull city", "leeds united",
+        "luton town", "middlesbrough", "millwall", "norwich city",
+        "plymouth argyle", "portsmouth", "preston north end", "qpr",
+        "queens park rangers", "sheffield united", "sheffield wednesday",
+        "stoke city", "sunderland", "swansea city", "watford", "west brom",
+        "west bromwich",
     ],
     "League One": [
-        "barnsley","birmingham city","bolton wanderers","bristol rovers","burton albion",
-        "cambridge united","charlton athletic","exeter city","huddersfield","leyton orient",
-        "lincoln city","northampton","oxford united","peterborough","reading fc",
-        "rotherham","shrewsbury","stevenage","stockport county","wigan athletic","wrexham",
+        "barnsley", "birmingham city", "bolton wanderers", "bristol rovers",
+        "burton albion", "cambridge united", "charlton athletic", "exeter city",
+        "huddersfield", "leyton orient", "lincoln city", "northampton",
+        "oxford united", "peterborough", "reading fc", "rotherham",
+        "shrewsbury", "stevenage", "stockport county", "wigan athletic", "wrexham",
     ],
     "La Liga": [
-        "alaves","atletico madrid","fc barcelona","real madrid","sevilla fc",
-        "valencia cf","villarreal cf","athletic bilbao","athletic club","real sociedad",
-        "real betis","ca osasuna","rc celta","getafe cf","girona fc","las palmas",
-        "cd leganes","rcd mallorca","rayo vallecano","rcd espanyol","deportivo alaves","real valladolid",
+        "alaves", "atletico madrid", "fc barcelona", "real madrid",
+        "sevilla fc", "valencia cf", "villarreal cf", "athletic bilbao",
+        "athletic club", "real sociedad", "real betis", "ca osasuna",
+        "rc celta", "getafe cf", "girona fc", "las palmas", "cd leganes",
+        "rcd mallorca", "rayo vallecano", "rcd espanyol", "deportivo alaves",
+        "real valladolid",
     ],
     "Segunda Division": [
-        "albacete","alcorcon","almeria","burgos cf","castellon","eldense","elche cf",
-        "ferrol","huesca","mirandes","cd mirandes","oviedo","real oviedo",
-        "racing santander","sd eibar","sd huesca","sporting gijon","tenerife",
-        "cd tenerife","villarreal b","zaragoza","racing de ferrol","deportivo coruna",
+        "albacete", "alcorcon", "almeria", "burgos cf", "castellon",
+        "eldense", "elche cf", "ferrol", "huesca", "mirandes",
+        "cd mirandes", "oviedo", "real oviedo", "racing santander",
+        "sd eibar", "sd huesca", "sd ponferradina", "sporting gijon",
+        "tenerife", "cd tenerife", "villarreal b", "zaragoza",
+        "racing de ferrol", "deportivo coruna",
     ],
     "Bundesliga": [
-        "bayer leverkusen","fc bayern","borussia dortmund","rb leipzig",
-        "eintracht frankfurt","sc freiburg","tsg hoffenheim","fsv mainz",
-        "sv werder","vfl wolfsburg","fc augsburg","vfl bochum","1. fc heidenheim",
-        "holstein kiel","borussia monchengladbach","fc st. pauli","vfb stuttgart","1. fc union berlin",
+        "bayer leverkusen", "fc bayern", "borussia dortmund", "rb leipzig",
+        "eintracht frankfurt", "sc freiburg", "tsg hoffenheim", "fsv mainz",
+        "sv werder", "vfl wolfsburg", "fc augsburg", "vfl bochum",
+        "1. fc heidenheim", "holstein kiel", "borussia monchengladbach",
+        "fc st. pauli", "vfb stuttgart", "1. fc union berlin",
     ],
     "2. Bundesliga": [
-        "1. fc kaiserslautern","1. fc magdeburg","1. fc nurnberg","1. fc schalke",
-        "darmstadt 98","dynamo dresden","hannover 96","hamburger sv","hertha berlin",
-        "karlsruher sc","sc paderborn","ssv ulm","sv elversberg","fortuna dusseldorf","greuther furth",
+        "1. fc kaiserslautern", "1. fc magdeburg", "1. fc nurnberg",
+        "1. fc schalke", "darmstadt 98", "dynamo dresden", "hannover 96",
+        "hamburger sv", "hertha berlin", "karlsruher sc", "sc paderborn",
+        "ssv ulm", "sv elversberg", "fortuna dusseldorf", "greuther furth",
     ],
     "Serie A": [
-        "ac milan","atalanta","bologna fc","cagliari calcio","como 1907","empoli fc",
-        "acf fiorentina","genoa cfc","hellas verona","inter milan","fc internazionale",
-        "juventus","lazio rome","us lecce","ac monza","ssc napoli","parma calcio",
-        "as roma","torino fc","udinese calcio","venezia fc",
+        "ac milan", "atalanta", "bologna fc", "cagliari calcio",
+        "como 1907", "empoli fc", "acf fiorentina", "genoa cfc",
+        "hellas verona", "inter milan", "fc internazionale", "juventus",
+        "lazio rome", "us lecce", "ac monza", "ssc napoli",
+        "parma calcio", "as roma", "torino fc", "udinese calcio", "venezia fc",
     ],
     "Serie B": [
-        "ac cesena","ascoli calcio","bari","benevento calcio","brescia calcio",
-        "carrarese calcio","catanzaro","cosenza calcio","cremonese","frosinone calcio",
-        "juve stabia","mantova","modena fc","palermo fc","pisa sporting club",
-        "reggiana","salernitana","sampdoria","sassuolo","spezia calcio","sudtirol",
+        "ac cesena", "ascoli calcio", "bari", "benevento calcio",
+        "brescia calcio", "carrarese calcio", "catanzaro",
+        "cosenza calcio", "cremonese", "frosinone calcio",
+        "juve stabia", "mantova", "modena fc", "palermo fc",
+        "pisa sporting club", "reggiana", "salernitana",
+        "sampdoria", "sassuolo", "spezia calcio", "sudtirol",
     ],
     "Ligue 1": [
-        "angers sco","auxerre","stade brestois","le havre ac","rc lens","losc lille",
-        "olympique lyonnais","olympique marseille","as monaco","montpellier hsc",
-        "fc nantes","ogc nice","paris saint-germain","paris fc","stade de reims",
-        "stade rennais","saint-etienne","rc strasbourg","toulouse fc",
+        "angers sco", "auxerre", "stade brestois", "le havre ac",
+        "rc lens", "losc lille", "olympique lyonnais", "olympique marseille",
+        "as monaco", "montpellier hsc", "fc nantes", "ogc nice",
+        "paris saint-germain", "paris fc", "stade de reims",
+        "stade rennais", "saint-etienne", "rc strasbourg", "toulouse fc",
     ],
     "Ligue 2": [
-        "amiens sc","annecy fc","bordeaux","caen","fc caen","clermont foot",
-        "concarneau","dunkerque","grenoble foot","laval","metz","fc metz",
-        "niort","pau fc","quevilly rouen","red star","rodez","sc bastia","valenciennes",
+        "amiens sc", "annecy fc", "bordeaux", "caen", "fc caen",
+        "clermont foot", "concarneau", "dunkerque", "grenoble foot",
+        "laval", "metz", "fc metz", "niort", "pau fc",
+        "quevilly rouen", "red star", "rodez", "sc bastia", "valenciennes",
     ],
     "Eredivisie": [
-        "ajax","az alkmaar","feyenoord","sc heerenveen","heracles almelo",
-        "nec nijmegen","psv eindhoven","sparta rotterdam","fc twente","fc utrecht",
-        "rkc waalwijk","willem ii","go ahead eagles","sc cambuur",
-        "excelsior rotterdam","fc groningen","fortuna sittard",
+        "ajax", "az alkmaar", "feyenoord", "sc heerenveen",
+        "heracles almelo", "nec nijmegen", "psv eindhoven",
+        "sparta rotterdam", "fc twente", "fc utrecht",
+        "rkc waalwijk", "willem ii", "go ahead eagles",
+        "sc cambuur", "excelsior rotterdam", "fc groningen", "fortuna sittard",
     ],
     "Eerste Divisie": [
-        "ado den haag","almere city","bv veendam","dordrecht","fc den bosch",
-        "fc eindhoven","fc emmen","fc oss","fc volendam","helmond sport",
-        "roda jc","sc telstar","jong ajax","jong az","jong psv","jong utrecht",
+        "ado den haag", "almere city", "bv veendam", "dordrecht",
+        "fc den bosch", "fc eindhoven", "fc emmen", "fc oss", "fc volendam",
+        "helmond sport", "roda jc", "sc telstar", "jong ajax",
+        "jong az", "jong psv", "jong utrecht",
     ],
     "Liga NOS": [
-        "sl benfica","sporting cp","fc porto","sc braga","vitoria sc",
-        "vitoria guimaraes","boavista fc","famalicao","fc famalicao","estoril praia",
-        "fc arouca","fc vizela","gil vicente","moreirense fc","rio ave fc",
-        "santa clara","cd nacional","cs maritimo",
+        "sl benfica", "sporting cp", "fc porto", "sc braga",
+        "vitoria sc", "vitoria guimaraes", "boavista fc",
+        "famalicao", "fc famalicao", "estoril praia", "fc arouca",
+        "fc vizela", "gil vicente", "moreirense fc", "rio ave fc",
+        "santa clara", "cd nacional", "cs maritimo",
     ],
     "Pro League": [
-        "rsc anderlecht","club brugge","kaa gent","standard liege","kv mechelen",
-        "kv kortrijk","royal antwerp","krc genk","cercle brugge","oh leuven",
-        "rwdm brussels","beerschot va","sint-truiden","charleroi","sporting charleroi","ksk beveren",
+        "rsc anderlecht", "club brugge", "kaa gent", "standard liege",
+        "kv mechelen", "kv kortrijk", "royal antwerp", "krc genk",
+        "cercle brugge", "oh leuven", "rwdm brussels", "beerschot va",
+        "sint-truiden", "charleroi", "sporting charleroi", "ksk beveren",
     ],
     "Super Lig": [
-        "fenerbahce","galatasaray","besiktas","trabzonspor","basaksehir",
-        "istanbul basaksehir","sivasspor","konyaspor","kayserispor","antalyaspor",
-        "kasimpasa","gaziantep","alanyaspor","samsunspor","rizespor","adana demirspor",
+        "fenerbahce", "galatasaray", "besiktas", "trabzonspor",
+        "basaksehir", "istanbul basaksehir", "sivasspor", "konyaspor",
+        "kayserispor", "antalyaspor", "kasimpasa", "gaziantep",
+        "alanyaspor", "samsunspor", "rizespor", "adana demirspor",
     ],
     "Premiership": [
-        "celtic fc","rangers fc","heart of midlothian","hibernian fc","aberdeen fc",
-        "dundee fc","dundee united","kilmarnock fc","livingston fc","motherwell fc",
-        "ross county","st johnstone","st mirren",
+        "celtic fc", "rangers fc", "heart of midlothian", "hibernian fc",
+        "aberdeen fc", "dundee fc", "dundee united", "kilmarnock fc",
+        "livingston fc", "motherwell fc", "ross county", "st johnstone",
+        "st mirren",
     ],
-    "Brasileirao A": [
-        "atletico mineiro","botafogo","flamengo","fluminense","gremio",
-        "internacional","palmeiras","santos fc","sao paulo fc","sport recife",
-        "vasco da gama","fortaleza ec","ceara sc","bahia","cruzeiro",
-        "atletico goianiense","corinthians","bragantino","juventude","vitoria",
-        "cuiaba","coritiba","avai","goias","america mineiro",
-        "athletico paranaense","atletico paranaense","remo","tombense",
-        "londrina","vila nova","apparecidense",
-    ],
-    "Brasileirao B": [
-        "chapecoense","criciuma","guarani","ituano","operario ferroviario",
-        "ponte preta","sampaio correa","novorizontino","mirassol","nauti co","nautico",
-        "iguatu","coritiba","sport recife","avai","ponte preta",
-        "botafogo sp","sao bernardo","vila nova","remo","londrina",
-        "crb","csavai","aparecida","gama",
+    "Super League": [
+        "aek athens", "olympiacos", "panathinaikos", "paok thessaloniki",
+        "aris thessaloniki", "panaitolikos gfs", "pas giannina",
+        "atromitos", "asteras tripolis", "levadiakos", "ionikos",
     ],
     "HNL": [
-        "dinamo zagreb","hajduk split","rijeka","osijek","lokomotiva zagreb",
-        "sibenik","istra","varazdin","gorica","slaven belupo","slaven koprivnica",
+        "gnk dinamo zagreb", "hnk rijeka", "hnk hajduk split",
+        "nk osijek", "nk lokomotiva", "nk varazdin",
+        "nk istra 1961", "nk sibenik", "nk gorica", "nk slaven belupo",
+        "dinamo zagreb", "hajduk split", "rijeka", "osijek",
+        "lokomotiva zagreb", "slaven koprivnica",
     ],
-    "Eliteserien": [
-        "bodo/glimt","brann","molde fk","rosenborg","viking fk",
-        "stromsgodset","haugesund","valerenga","sarpsborg 08","lsk",
+    "Superliga": [
+        "fc kobenhavn", "brondby if", "agf aarhus", "fc midtjylland",
+        "odense bk", "randers fc", "silkeborg if", "fc nordsjaelland",
+        "vejle bk", "aab aalborg", "hvidovre if",
     ],
     "Allsvenskan": [
-        "malmo ff","djurgarden","ifk goteborg","ifk norrkoping","hammarby",
-        "helsingborg","aik","hacken","orebro","mjallby","norrkoping","varnamo",
-        "sirius","elfsborg","kalmar","goteborg",
+        "malmo ff", "ifk goteborg", "djurgarden", "hammarby",
+        "ifk norrkoping", "ik sirius", "kalmar ff", "halmstads bk",
+        "helsingborg", "mjallby aif", "varbergs bois", "orebro sk",
+        "hacken", "bk hacken",
+    ],
+    "Superettan": [
+        "assyriska ff", "brage", "dalkurd ff", "degerfors if",
+        "gais", "gefle if", "goteborg fc", "orgryte is",
+        "syrianska fc", "utsiktens bk",
+    ],
+    "Eliteserien": [
+        "rosenborg bk", "bodo glimt", "molde fk", "viking fk", "brann",
+        "sk brann", "valerenga", "sarpsborg 08", "aalesunds fk",
+        "haugesund", "fk haugesund", "lillestrom sk", "stromsgodset",
+        "odd grenland", "stabek", "tromso il",
+    ],
+    "Brasileirao A": [
+        "atletico mineiro", "atletico-mg", "atletico paranaense",
+        "atletico-pr", "bahia", "botafogo rj", "red bull bragantino",
+        "corinthians", "criciuma ec", "cruzeiro ec", "flamengo",
+        "fluminense fc", "fortaleza esporte", "gremio porto alegre",
+        "sport club internacional", "juventude", "palmeiras", "santos fc",
+        "sao paulo fc", "cr vasco da gama",
+        "cuiaba", "ceara sc", "america mineiro", "remo",
+        "tombense", "londrina", "vila nova", "vitoria",
+    ],
+    "Brasileirao B": [
+        "america mg", "avai fc", "botafogo sp", "chapecoense",
+        "coritiba fc", "crb maceio", "figueirense", "goias esporte",
+        "guarani fc", "ituano fc", "londrina ec", "mirassol fc",
+        "novorizontino", "operario ferroviario", "ponte preta",
+        "sampaio correa", "sport recife", "vitoria",
+        "nautico", "sao bernardo", "iguatu", "crb",
+    ],
+    "Argentina": [
+        "ca boca juniors", "ca river plate", "ca racing club",
+        "ca independiente", "ca san lorenzo", "estudiantes la plata",
+        "ca lanus", "ca huracan", "velez sarsfield",
+        "argentinos juniors", "rosario central", "talleres cordoba",
+        "belgrano cordoba", "atletico tucuman", "godoy cruz",
+        "aldosivi", "independiente", "river plate", "boca juniors",
+        "racing club", "talleres", "colon santa fe",
     ],
     "Colombia": [
-        "atletico nacional","millonarios","america de cali","deportivo cali",
-        "once caldas","junior","independiente medellin","santa fe",
-        "deportes tolima","cucuta deportivo","envigado","la equidad",
-        "rionegro aguilas","patriotas boyaca","jaguares","deportivo pereira",
-        "deportivo pasto","boyaca chico",
+        "atletico nacional", "independiente medellin", "deportivo cali",
+        "millonarios fc", "junior barranquilla", "santa fe bogota",
+        "once caldas", "deportes tolima", "deportivo pereira",
+        "atletico bucaramanga", "america de cali", "cucuta deportivo",
+        "envigado", "la equidad", "rionegro aguilas",
+    ],
+    "Chile": [
+        "colo-colo", "universidad de chile", "universidad catolica",
+        "cd antofagasta", "cd cobresal", "deportivo nublense",
+        "everton de vina", "fc la serena", "deportes magallanes",
+        "o'higgins", "san luis", "union espanola", "union la calera", "huachipato",
+    ],
+    "A-League": [
+        "adelaide united", "brisbane roar", "central coast mariners",
+        "macarthur fc", "melbourne city", "melbourne victory",
+        "newcastle jets", "perth glory", "sydney fc",
+        "wellington phoenix", "western sydney", "western united",
     ],
 }
 
@@ -298,20 +363,28 @@ def normalizar(nome: str) -> str:
 def time_na_liga(nome_time: str):
     """
     Verifica se um time pertence a alguma liga alvo.
-    Usa match mais restrito para evitar falsos positivos com nomes genéricos.
+    Usa match exato ou por token de palavra para evitar falsos positivos.
+    Ex: 'league' sozinho NÃO deve casar com 'League One'.
     """
     nome = normalizar(nome_time)
-    if len(nome) < 4:          # nomes muito curtos causam falsos positivos
+    if not nome or len(nome) < 4:
         return "", False
+
     for liga, times in TIMES_LIGAS.items():
         for t in times:
-            # Match exato ou nome do time contido no nome completo (com palavra inteira)
-            if t == nome:
+            t_norm = normalizar(t)
+            # Match exato
+            if t_norm == nome:
                 return liga, True
-            # Evitar match parcial em nomes genéricos curtos (racing, sport, inter, etc.)
-            # Só aceita se o token for >= 6 chars OU for match exato
-            if len(t) >= 6 and (t in nome or nome in t):
-                return liga, True
+            # Match por token: o nome do time alvo deve ter >= 6 chars
+            # e deve ser encontrado como substring relevante (não fragmento)
+            if len(t_norm) >= 6:
+                # O time alvo contido no nome completo do time
+                if t_norm in nome and len(nome) <= len(t_norm) + 15:
+                    return liga, True
+                # O nome do time contido no time alvo (time com nome mais curto)
+                if nome in t_norm and len(nome) >= 6:
+                    return liga, True
     return "", False
 
 
@@ -657,10 +730,22 @@ def lucy_pagina(data_str: str, pagina: int) -> dict:
         return {}
 
 
-def lucy_buscar_jogos(data_str: str) -> list:
-    """Busca todos os jogos das ligas alvo em uma data (Lucy)."""
+def lucy_buscar_jogos(data_str: str, incluir_dia_anterior: bool = False) -> list:
+    """
+    Busca todos os jogos das ligas alvo em uma data (Lucy).
+    
+    incluir_dia_anterior=True: usado pelo módulo C (scanner pré-live)
+        para cobrir jogos que iniciaram perto da meia-noite UTC.
+    incluir_dia_anterior=False (padrão): usado pelo módulo A (coleta histórica)
+        onde a data alvo é exata e não deve buscar dias anteriores.
+    """
     encontrados = []
-    for delta in [-1, 0]:   # ontem e hoje (cobertura fuso UTC)
+    ids_vistos = set()
+
+    # Deltas: módulo A usa só [0], módulo C pode usar [-1, 0]
+    deltas = [-1, 0] if incluir_dia_anterior else [0]
+
+    for delta in deltas:
         dt = (datetime.strptime(data_str, "%Y-%m-%d") + timedelta(days=delta)).strftime("%Y-%m-%d")
         pagina = 1
         while True:
@@ -671,15 +756,19 @@ def lucy_buscar_jogos(data_str: str) -> list:
             if not jogos:
                 break
             for j in jogos:
+                mid = j.get("sport_event_id", "")
+                if mid and mid in ids_vistos:
+                    continue  # dedup por Match_ID
                 liga_c, ok_c = time_na_liga(j.get("NomeCasa", ""))
                 liga_f, ok_f = time_na_liga(j.get("NomeVisitante", ""))
                 if ok_c or ok_f:
                     liga_inferida = liga_c if ok_c else liga_f
-                    # Validar: ambos os times devem pertencer à mesma liga ou pelo menos uma deve ser reconhecida
                     if liga_inferida in LIGAS_VALIDAS:
                         j["_liga"] = liga_inferida
                         j["_data"] = dt
                         encontrados.append(j)
+                        if mid:
+                            ids_vistos.add(mid)
             total_pag = data.get("numberPages", 1)
             if pagina >= total_pag:
                 break
@@ -741,9 +830,9 @@ def modulo_A():
             indice_sh[sr_id] = sherlock_odds_basicas(item)
     print(f"  Sherlock: {len(indice_sh)} jogos indexados")
 
-    # Lucy: buscar jogos de ontem
+    # Lucy: buscar jogos de ontem (apenas a data exata, sem dia anterior)
     print(f"  Buscando jogos Lucy ({ontem})...")
-    jogos = lucy_buscar_jogos(ontem)
+    jogos = lucy_buscar_jogos(ontem, incluir_dia_anterior=False)
     print(f"  Lucy: {len(jogos)} jogos nas ligas alvo")
 
     if not jogos:
@@ -752,11 +841,19 @@ def modulo_A():
 
     # Coletar cada jogo (modo histórico = sem espera)
     novas = 0
+    # Set de Match_IDs já existentes na base para evitar duplicatas
+    ids_existentes = set(df_ex["Match_ID"].astype(str).tolist()) if "Match_ID" in df_ex.columns and len(df_ex) > 0 else set()
+
     for jogo in jogos:
         match_id  = jogo["sport_event_id"]
         nome_casa = jogo.get("NomeCasa", "?").title()
         nome_fora = jogo.get("NomeVisitante", "?").title()
         liga      = jogo.get("_liga", "?")
+
+        # Pular se Match_ID já existe na base
+        if str(match_id) in ids_existentes:
+            print(f"  ↷  [{liga}] {nome_casa} vs {nome_fora} — já na base, pulando")
+            continue
 
         # Linha base
         linha = {
@@ -839,6 +936,7 @@ def modulo_A():
         # Append na base
         df_novo  = pd.DataFrame([linha])
         df_ex    = pd.concat([df_ex, df_novo], ignore_index=True)
+        ids_existentes.add(str(match_id))
         novas   += 1
         print(f"  ✓  [{liga}] {nome_casa} vs {nome_fora}  "
               f"Filtro={linha['Filtro_0x0_min5']}  Over={linha['Over05_HT']}")
