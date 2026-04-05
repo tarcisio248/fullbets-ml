@@ -1,111 +1,11 @@
 {
-  "atualizado": "04/04/2026 22:02",
+  "atualizado": "04/04/2026 22:10",
   "total": 187,
   "n_apto": 57,
   "sinais": [
     {
       "Data": "2026-04-04",
-      "Hora": "00:00",
-      "Liga": "Brasileirao A",
-      "Casa": "Vasco da Gama",
-      "Visitante": "Botafogo",
-      "m5": 0.6916,
-      "m10": 0.8049,
-      "m15": 0.7816,
-      "LG_C": 132.0,
-      "LG_V": 259.0,
-      "H_Score_C": 197.0,
-      "Odd_Casa": 2.1,
-      "Odd_Emp": 4.0,
-      "Odd_Visit": 3.5,
-      "APTO": "SIM",
-      "MOTIVO": "OK",
-      "Match_ID": "sr:match:66886660",
-      "Sherlock_ID": 8409519
-    },
-    {
-      "Data": "2026-04-04",
-      "Hora": "00:00",
-      "Liga": "Argentina",
-      "Casa": "Rosario Central",
-      "Visitante": "Atl\u00e9tico Tucum\u00e1n",
-      "m5": 0.5864,
-      "m10": 0.8544,
-      "m15": 0.8227,
-      "LG_C": 78.0,
-      "LG_V": 131.0,
-      "H_Score_C": 200.0,
-      "Odd_Casa": 1.69,
-      "Odd_Emp": 6.8,
-      "Odd_Visit": 3.75,
-      "APTO": "N\u00c3O",
-      "MOTIVO": "LG_C=78<100",
-      "Match_ID": "sr:match:67091890",
-      "Sherlock_ID": 8418996
-    },
-    {
-      "Data": "2026-04-04",
-      "Hora": "00:30",
-      "Liga": "Colombia",
-      "Casa": "Deportes Tolima",
-      "Visitante": "Santa Fe",
-      "m5": 0.5662,
-      "m10": 0.6011,
-      "m15": 0.737,
-      "LG_C": 73.0,
-      "LG_V": 163.0,
-      "H_Score_C": 173.0,
-      "Odd_Casa": 1.75,
-      "Odd_Emp": 5.7,
-      "Odd_Visit": 3.65,
-      "APTO": "N\u00c3O",
-      "MOTIVO": "LG_C=73<100",
-      "Match_ID": "sr:match:69508216",
-      "Sherlock_ID": 8432041
-    },
-    {
-      "Data": "2026-04-04",
-      "Hora": "01:00",
-      "Liga": "La Liga",
-      "Casa": "Athletic Club Boise",
-      "Visitante": "Spokane Velocity",
-      "m5": 0.6567,
-      "m10": 0.7471,
-      "m15": 0.7673,
-      "LG_C": NaN,
-      "LG_V": NaN,
-      "H_Score_C": NaN,
-      "Odd_Casa": 2.45,
-      "Odd_Emp": 2.5,
-      "Odd_Visit": 3.2,
-      "APTO": "N\u00c3O",
-      "MOTIVO": "LG_C=0<100 | Odd_Emp=2.5<3.5",
-      "Match_ID": NaN,
-      "Sherlock_ID": 8409473
-    },
-    {
-      "Data": "2026-04-04",
-      "Hora": "01:00",
-      "Liga": "Serie A",
-      "Casa": "Inter",
-      "Visitante": "Isidro Metap\u00e1n",
-      "m5": 0.6139,
-      "m10": 0.7369,
-      "m15": 0.7148,
-      "LG_C": 143.0,
-      "LG_V": 111.0,
-      "H_Score_C": 173.0,
-      "Odd_Casa": 3.15,
-      "Odd_Emp": 2.54,
-      "Odd_Visit": 3.15,
-      "APTO": "N\u00c3O",
-      "MOTIVO": "Odd_Emp=2.5<3.5",
-      "Match_ID": "sr:match:67603926",
-      "Sherlock_ID": 8430085
-    },
-    {
-      "Data": "2026-04-04",
-      "Hora": "08:00",
+      "Hora": "05:00",
       "Liga": "Colombia",
       "Casa": "Shenzhen Juniors",
       "Visitante": "Yanbian Longding",
@@ -125,7 +25,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "10:00",
+      "Hora": "07:00",
       "Liga": "Liga NOS",
       "Casa": "Sporting CP II",
       "Visitante": "FC Penafiel",
@@ -145,7 +45,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "10:30",
+      "Hora": "07:30",
       "Liga": "Allsvenskan",
       "Casa": "Norrk\u00f6ping",
       "Visitante": "V\u00e4rnamo",
@@ -165,7 +65,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "11:00",
+      "Hora": "08:00",
       "Liga": "2. Bundesliga",
       "Casa": "Magdeburg",
       "Visitante": "Bochum",
@@ -185,7 +85,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "11:00",
+      "Hora": "08:00",
       "Liga": "2. Bundesliga",
       "Casa": "Kaiserslautern",
       "Visitante": "Fortuna D\u00fcsseldorf",
@@ -205,7 +105,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "11:00",
+      "Hora": "08:00",
       "Liga": "2. Bundesliga",
       "Casa": "Arminia Bielefeld",
       "Visitante": "Darmstadt 98",
@@ -225,7 +125,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "11:30",
+      "Hora": "08:30",
       "Liga": "Super Lig",
       "Casa": "Kas\u0131mpa\u015fa",
       "Visitante": "Kayserispor",
@@ -245,7 +145,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "11:45",
+      "Hora": "08:45",
       "Liga": "Premier League",
       "Casa": "Manchester City",
       "Visitante": "Liverpool",
@@ -265,7 +165,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "12:00",
+      "Hora": "09:00",
       "Liga": "Ligue 1",
       "Casa": "Reims",
       "Visitante": "Boulogne",
@@ -285,7 +185,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "12:00",
+      "Hora": "09:00",
       "Liga": "Ligue 1",
       "Casa": "Montpellier",
       "Visitante": "Troyes",
@@ -305,7 +205,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "12:00",
+      "Hora": "09:00",
       "Liga": "La Liga",
       "Casa": "Real Sociedad",
       "Visitante": "Levante UD",
@@ -325,7 +225,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "12:30",
+      "Hora": "09:30",
       "Liga": "Serie B",
       "Casa": "Cosenza",
       "Visitante": "Foggia",
@@ -345,7 +245,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "12:30",
+      "Hora": "09:30",
       "Liga": "Serie A",
       "Casa": "Siracusa",
       "Visitante": "Atalanta II",
@@ -365,7 +265,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:00",
+      "Hora": "10:00",
       "Liga": "HNL",
       "Casa": "Dinamo Zagreb",
       "Visitante": "Osijek",
@@ -385,7 +285,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:00",
+      "Hora": "10:00",
       "Liga": "Allsvenskan",
       "Casa": "Hammarby",
       "Visitante": "Mj\u00e4llby",
@@ -405,7 +305,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:00",
+      "Hora": "10:00",
       "Liga": "Allsvenskan",
       "Casa": "Kifisia",
       "Visitante": "Panserraikos",
@@ -425,7 +325,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:00",
+      "Hora": "10:00",
       "Liga": "Segunda Division",
       "Casa": "Racing",
       "Visitante": "Juventud",
@@ -445,7 +345,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:00",
+      "Hora": "10:00",
       "Liga": "Serie B",
       "Casa": "Sassuolo",
       "Visitante": "Cagliari",
@@ -465,7 +365,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:00",
+      "Hora": "10:00",
       "Liga": "Liga NOS",
       "Casa": "Pa\u00e7os de Ferreira",
       "Visitante": "CS Mar\u00edtimo",
@@ -485,7 +385,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:30",
+      "Hora": "10:30",
       "Liga": "Bundesliga",
       "Casa": "Borussia M'gladbach",
       "Visitante": "Heidenheim",
@@ -505,7 +405,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:30",
+      "Hora": "10:30",
       "Liga": "Bundesliga",
       "Casa": "Hoffenheim",
       "Visitante": "Mainz 05",
@@ -525,7 +425,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:30",
+      "Hora": "10:30",
       "Liga": "Bundesliga",
       "Casa": "Bayer Leverkusen",
       "Visitante": "Wolfsburg",
@@ -545,7 +445,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:30",
+      "Hora": "10:30",
       "Liga": "Brasileirao B",
       "Casa": "Jeunesse Sportive Omrane",
       "Visitante": "Monastir",
@@ -565,7 +465,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:30",
+      "Hora": "10:30",
       "Liga": "2. Bundesliga",
       "Casa": "Hamburger SV",
       "Visitante": "Augsburg",
@@ -585,7 +485,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:30",
+      "Hora": "10:30",
       "Liga": "Bundesliga",
       "Casa": "Freiburg",
       "Visitante": "Bayern M\u00fcnchen",
@@ -605,7 +505,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "13:30",
+      "Hora": "10:30",
       "Liga": "Bundesliga",
       "Casa": "Werder Bremen",
       "Visitante": "RB Leipzig",
@@ -625,7 +525,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Premiership",
       "Casa": "St. Mirren",
       "Visitante": "Aberdeen",
@@ -645,7 +545,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Brasileirao B",
       "Casa": "Spartak Pleven",
       "Visitante": "Sportist Svoge",
@@ -665,7 +565,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Premiership",
       "Casa": "Motherwell",
       "Visitante": "Falkirk",
@@ -685,7 +585,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Premiership",
       "Casa": "Ross County",
       "Visitante": "Airdrieonians",
@@ -705,7 +605,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Championship",
       "Casa": "Rangers",
       "Visitante": "Dundee United",
@@ -725,7 +625,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Super Lig",
       "Casa": "Gaziantep FK",
       "Visitante": "Alanyaspor",
@@ -745,7 +645,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Pro League",
       "Casa": "Zulte-Waregem",
       "Visitante": "Cercle Brugge",
@@ -765,7 +665,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Pro League",
       "Casa": "RSC Anderlecht II",
       "Visitante": "Waasland-Beveren",
@@ -785,7 +685,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Premiership",
       "Casa": "Hibernian",
       "Visitante": "Kilmarnock",
@@ -805,7 +705,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:15",
+      "Hora": "11:15",
       "Liga": "Segunda Division",
       "Casa": "Albacete Balompi\u00e9",
       "Visitante": "Burgos CF",
@@ -825,7 +725,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:15",
+      "Hora": "11:15",
       "Liga": "La Liga",
       "Casa": "RCD Mallorca",
       "Visitante": "Real Madrid",
@@ -845,7 +745,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:30",
+      "Hora": "11:30",
       "Liga": "Eredivisie",
       "Casa": "PSV",
       "Visitante": "Utrecht",
@@ -865,7 +765,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "14:30",
+      "Hora": "11:30",
       "Liga": "Liga NOS",
       "Casa": "CD Nacional",
       "Visitante": "Estrela Amadora",
@@ -885,7 +785,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "15:00",
+      "Hora": "12:00",
       "Liga": "Ligue 1",
       "Casa": "Strasbourg",
       "Visitante": "Nice",
@@ -905,7 +805,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "15:00",
+      "Hora": "12:00",
       "Liga": "Brasileirao B",
       "Casa": "Rodange",
       "Visitante": "Victoria Rosport",
@@ -925,7 +825,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "15:30",
+      "Hora": "12:30",
       "Liga": "Serie A",
       "Casa": "Perugia",
       "Visitante": "Juventus II",
@@ -945,7 +845,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "15:30",
+      "Hora": "12:30",
       "Liga": "Liga NOS",
       "Casa": "Bra",
       "Visitante": "Forl\u00ec",
@@ -965,7 +865,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "15:45",
+      "Hora": "12:45",
       "Liga": "HNL",
       "Casa": "Slaven Koprivnica",
       "Visitante": "Rijeka",
@@ -985,7 +885,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "16:00",
+      "Hora": "13:00",
       "Liga": "Segunda Division",
       "Casa": "Racing",
       "Visitante": "UT P\u00e9tange",
@@ -1005,7 +905,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "16:00",
+      "Hora": "13:00",
       "Liga": "Brasileirao B",
       "Casa": "Lausanne Sport",
       "Visitante": "Winterthur",
@@ -1025,7 +925,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "16:00",
+      "Hora": "13:00",
       "Liga": "Serie A",
       "Casa": "Hellas Verona",
       "Visitante": "Fiorentina",
@@ -1045,7 +945,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "16:15",
+      "Hora": "13:15",
       "Liga": "Premier League",
       "Casa": "Chelsea",
       "Visitante": "Port Vale",
@@ -1065,7 +965,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "16:15",
+      "Hora": "13:15",
       "Liga": "Pro League",
       "Casa": "OH Leuven",
       "Visitante": "Standard Li\u00e8ge",
@@ -1085,7 +985,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "16:30",
+      "Hora": "13:30",
       "Liga": "Argentina",
       "Casa": "Aldosivi",
       "Visitante": "Estudiantes R\u00edo Cuarto",
@@ -1105,7 +1005,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "16:30",
+      "Hora": "13:30",
       "Liga": "La Liga",
       "Casa": "Cultural y Deportiva Leonesa",
       "Visitante": "Real Valladolid",
@@ -1125,7 +1025,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "16:30",
+      "Hora": "13:30",
       "Liga": "Bundesliga",
       "Casa": "Stuttgart",
       "Visitante": "Borussia Dortmund",
@@ -1145,7 +1045,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "16:30",
+      "Hora": "13:30",
       "Liga": "La Liga",
       "Casa": "Real Betis",
       "Visitante": "RCD Espanyol",
@@ -1165,7 +1065,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "16:45",
+      "Hora": "13:45",
       "Liga": "Eerste Divisie",
       "Casa": "Telstar",
       "Visitante": "Groningen",
@@ -1185,7 +1085,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "17:00",
+      "Hora": "14:00",
       "Liga": "Serie A",
       "Casa": "AZ",
       "Visitante": "Fortuna Sittard",
@@ -1205,7 +1105,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "17:00",
+      "Hora": "14:00",
       "Liga": "Argentina",
       "Casa": "Excursionistas",
       "Visitante": "Talleres Remedios",
@@ -1225,7 +1125,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "17:00",
+      "Hora": "14:00",
       "Liga": "Premier League",
       "Casa": "Arsenal de Sarand\u00ed",
       "Visitante": "Argentino Merlo",
@@ -1245,7 +1145,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "17:00",
+      "Hora": "14:00",
       "Liga": "Brasileirao B",
       "Casa": "Sportivo Italiano",
       "Visitante": "Comunicaciones",
@@ -1265,7 +1165,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "17:00",
+      "Hora": "14:00",
       "Liga": "Liga NOS",
       "Casa": "Moreirense FC",
       "Visitante": "Sporting Braga",
@@ -1285,7 +1185,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "17:00",
+      "Hora": "14:00",
       "Liga": "Argentina",
       "Casa": "Talleres Remedios",
       "Visitante": "Arsenal de Sarand\u00ed",
@@ -1305,7 +1205,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "17:00",
+      "Hora": "14:00",
       "Liga": "Super Lig",
       "Casa": "Trabzonspor",
       "Visitante": "Galatasaray",
@@ -1325,7 +1225,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "17:00",
+      "Hora": "14:00",
       "Liga": "Ligue 1",
       "Casa": "Brest",
       "Visitante": "Rennes",
@@ -1345,7 +1245,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "17:00",
+      "Hora": "14:00",
       "Liga": "Liga NOS",
       "Casa": "Rio Ave FC",
       "Visitante": "Alverca",
@@ -1365,7 +1265,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "18:00",
+      "Hora": "15:00",
       "Liga": "Pro League",
       "Casa": "Lommel United",
       "Visitante": "RWDM",
@@ -1385,7 +1285,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "18:00",
+      "Hora": "15:00",
       "Liga": "Ligue 1",
       "Casa": "Nancy",
       "Visitante": "Saint-\u00c9tienne",
@@ -1405,7 +1305,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "18:00",
+      "Hora": "15:00",
       "Liga": "Pro League",
       "Casa": "Club Brugge II",
       "Visitante": "AS Eupen",
@@ -1425,7 +1325,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "18:00",
+      "Hora": "15:00",
       "Liga": "Brasileirao A",
       "Casa": "EC Lemense",
       "Visitante": "Gr\u00eamio S\u00e3ocarlense",
@@ -1445,7 +1345,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "18:15",
+      "Hora": "15:15",
       "Liga": "Brasileirao B",
       "Casa": "Deportivo Garcilaso",
       "Visitante": "Sport Boys",
@@ -1465,7 +1365,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "18:30",
+      "Hora": "15:30",
       "Liga": "2. Bundesliga",
       "Casa": "Dynamo Dresden",
       "Visitante": "Hertha BSC",
@@ -1485,7 +1385,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "18:30",
+      "Hora": "15:30",
       "Liga": "Premier League",
       "Casa": "Mladost DG",
       "Visitante": "Arsenal Tivat",
@@ -1505,7 +1405,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "18:30",
+      "Hora": "15:30",
       "Liga": "Serie B",
       "Casa": "Ascoli",
       "Visitante": "Vis Pesaro",
@@ -1525,7 +1425,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "18:45",
+      "Hora": "15:45",
       "Liga": "Pro League",
       "Casa": "Union Saint-Gilloise",
       "Visitante": "Sint-Truiden",
@@ -1545,7 +1445,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "18:45",
+      "Hora": "15:45",
       "Liga": "Serie A",
       "Casa": "Lazio",
       "Visitante": "Parma",
@@ -1565,7 +1465,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Brasileirao A",
       "Casa": "Fortaleza",
       "Visitante": "Juventude",
@@ -1585,7 +1485,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Brasileirao A",
       "Casa": "Vit\u00f3ria Futebol Clube (ES)",
       "Visitante": "Tombense",
@@ -1605,7 +1505,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Argentina",
       "Casa": "Estudiantes Caseros",
       "Visitante": "Central Norte",
@@ -1625,7 +1525,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Brasileirao A",
       "Casa": "Fluminense PI",
       "Visitante": "Ferrovi\u00e1rio",
@@ -1645,7 +1545,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Brasileirao A",
       "Casa": "Aparecidense",
       "Visitante": "Gama",
@@ -1665,7 +1565,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Brasileirao B",
       "Casa": "Iguatu",
       "Visitante": "Sampaio Corr\u00eaa",
@@ -1685,7 +1585,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Serie B",
       "Casa": "Tirol",
       "Visitante": "Piau\u00ed",
@@ -1705,7 +1605,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "La Liga",
       "Casa": "Atl\u00e9tico Madrid",
       "Visitante": "FC Barcelona",
@@ -1725,7 +1625,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Eredivisie",
       "Casa": "Excelsior",
       "Visitante": "NEC",
@@ -1745,7 +1645,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Eredivisie",
       "Casa": "Ajax",
       "Visitante": "Twente",
@@ -1765,7 +1665,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Argentina",
       "Casa": "CSD Independiente del Valle",
       "Visitante": "Orense SC",
@@ -1785,7 +1685,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Premier League",
       "Casa": "Southampton",
       "Visitante": "Arsenal",
@@ -1805,7 +1705,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:05",
+      "Hora": "16:05",
       "Liga": "Ligue 1",
       "Casa": "Lille",
       "Visitante": "Lens",
@@ -1825,7 +1725,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "19:30",
+      "Hora": "16:30",
       "Liga": "Liga NOS",
       "Casa": "Porto",
       "Visitante": "Famalic\u00e3o",
@@ -1845,7 +1745,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "20:00",
+      "Hora": "17:00",
       "Liga": "Super Lig",
       "Casa": "ASA",
       "Visitante": "Jacuipense",
@@ -1865,7 +1765,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "20:30",
+      "Hora": "17:30",
       "Liga": "Colombia",
       "Casa": "Independiente",
       "Visitante": "Racing Club",
@@ -1885,7 +1785,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "20:30",
+      "Hora": "17:30",
       "Liga": "Brasileirao B",
       "Casa": "Real Salt Lake",
       "Visitante": "Sporting KC",
@@ -1905,7 +1805,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "20:30",
+      "Hora": "17:30",
       "Liga": "Colombia",
       "Casa": "San Mart\u00edn Tucum\u00e1n",
       "Visitante": "Chacarita Juniors",
@@ -1925,7 +1825,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "21:00",
+      "Hora": "18:00",
       "Liga": "Brasileirao A",
       "Casa": "Cuiab\u00e1",
       "Visitante": "Cear\u00e1",
@@ -1945,7 +1845,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "21:00",
+      "Hora": "18:00",
       "Liga": "Brasileirao B",
       "Casa": "N\u00e1utico",
       "Visitante": "Ponte Preta",
@@ -1965,7 +1865,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "21:30",
+      "Hora": "18:30",
       "Liga": "Brasileirao A",
       "Casa": "S\u00e3o Paulo",
       "Visitante": "Cruzeiro",
@@ -1985,7 +1885,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "22:00",
+      "Hora": "19:00",
       "Liga": "Brasileirao B",
       "Casa": "Sampaio Corr\u00eaa RJ",
       "Visitante": "Noroeste",
@@ -2005,7 +1905,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "22:00",
+      "Hora": "19:00",
       "Liga": "Argentina",
       "Casa": "Col\u00f3n",
       "Visitante": "San Miguel",
@@ -2025,7 +1925,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "23:00",
+      "Hora": "20:00",
       "Liga": "Brasileirao A",
       "Casa": "Vila Nova",
       "Visitante": "Atl\u00e9tico GO",
@@ -2045,7 +1945,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "23:00",
+      "Hora": "20:00",
       "Liga": "Premier League",
       "Casa": "Everton",
       "Visitante": "\u00d1ublense",
@@ -2065,7 +1965,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "23:30",
+      "Hora": "20:30",
       "Liga": "Brasileirao B",
       "Casa": "Deportivo Recoleta",
       "Visitante": "Sportivo San Lorenzo",
@@ -2085,7 +1985,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "23:30",
+      "Hora": "20:30",
       "Liga": "Brasileirao A",
       "Casa": "Londrina",
       "Visitante": "Sport Recife",
@@ -2105,7 +2005,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "23:30",
+      "Hora": "20:30",
       "Liga": "Brasileirao B",
       "Casa": "Sporting JAX",
       "Visitante": "Tampa Bay Rowdies",
@@ -2125,7 +2025,7 @@
     },
     {
       "Data": "2026-04-04",
-      "Hora": "23:30",
+      "Hora": "20:30",
       "Liga": "Brasileirao B",
       "Casa": "Coritiba",
       "Visitante": "Fluminense",
@@ -2144,8 +2044,108 @@
       "Sherlock_ID": 8409765
     },
     {
+      "Data": "2026-04-04",
+      "Hora": "21:00",
+      "Liga": "Brasileirao A",
+      "Casa": "Vasco da Gama",
+      "Visitante": "Botafogo",
+      "m5": 0.6916,
+      "m10": 0.8049,
+      "m15": 0.7816,
+      "LG_C": 132.0,
+      "LG_V": 259.0,
+      "H_Score_C": 197.0,
+      "Odd_Casa": 2.1,
+      "Odd_Emp": 4.0,
+      "Odd_Visit": 3.5,
+      "APTO": "SIM",
+      "MOTIVO": "OK",
+      "Match_ID": "sr:match:66886660",
+      "Sherlock_ID": 8409519
+    },
+    {
+      "Data": "2026-04-04",
+      "Hora": "21:00",
+      "Liga": "Argentina",
+      "Casa": "Rosario Central",
+      "Visitante": "Atl\u00e9tico Tucum\u00e1n",
+      "m5": 0.5864,
+      "m10": 0.8544,
+      "m15": 0.8227,
+      "LG_C": 78.0,
+      "LG_V": 131.0,
+      "H_Score_C": 200.0,
+      "Odd_Casa": 1.69,
+      "Odd_Emp": 6.8,
+      "Odd_Visit": 3.75,
+      "APTO": "N\u00c3O",
+      "MOTIVO": "LG_C=78<100",
+      "Match_ID": "sr:match:67091890",
+      "Sherlock_ID": 8418996
+    },
+    {
+      "Data": "2026-04-04",
+      "Hora": "21:30",
+      "Liga": "Colombia",
+      "Casa": "Deportes Tolima",
+      "Visitante": "Santa Fe",
+      "m5": 0.5662,
+      "m10": 0.6011,
+      "m15": 0.737,
+      "LG_C": 73.0,
+      "LG_V": 163.0,
+      "H_Score_C": 173.0,
+      "Odd_Casa": 1.75,
+      "Odd_Emp": 5.7,
+      "Odd_Visit": 3.65,
+      "APTO": "N\u00c3O",
+      "MOTIVO": "LG_C=73<100",
+      "Match_ID": "sr:match:69508216",
+      "Sherlock_ID": 8432041
+    },
+    {
+      "Data": "2026-04-04",
+      "Hora": "22:00",
+      "Liga": "La Liga",
+      "Casa": "Athletic Club Boise",
+      "Visitante": "Spokane Velocity",
+      "m5": 0.6567,
+      "m10": 0.7471,
+      "m15": 0.7673,
+      "LG_C": NaN,
+      "LG_V": NaN,
+      "H_Score_C": NaN,
+      "Odd_Casa": 2.45,
+      "Odd_Emp": 2.5,
+      "Odd_Visit": 3.2,
+      "APTO": "N\u00c3O",
+      "MOTIVO": "LG_C=0<100 | Odd_Emp=2.5<3.5",
+      "Match_ID": NaN,
+      "Sherlock_ID": 8409473
+    },
+    {
+      "Data": "2026-04-04",
+      "Hora": "22:00",
+      "Liga": "Serie A",
+      "Casa": "Inter",
+      "Visitante": "Isidro Metap\u00e1n",
+      "m5": 0.6139,
+      "m10": 0.7369,
+      "m15": 0.7148,
+      "LG_C": 143.0,
+      "LG_V": 111.0,
+      "H_Score_C": 173.0,
+      "Odd_Casa": 3.15,
+      "Odd_Emp": 2.54,
+      "Odd_Visit": 3.15,
+      "APTO": "N\u00c3O",
+      "MOTIVO": "Odd_Emp=2.5<3.5",
+      "Match_ID": "sr:match:67603926",
+      "Sherlock_ID": 8430085
+    },
+    {
       "Data": "2026-04-05",
-      "Hora": "03:10",
+      "Hora": "00:10",
       "Liga": "Brasileirao B",
       "Casa": "Santos Laguna",
       "Visitante": "Am\u00e9rica",
@@ -2165,7 +2165,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "10:15",
+      "Hora": "07:15",
       "Liga": "Eredivisie",
       "Casa": "Go Ahead Eagles",
       "Visitante": "PEC Zwolle",
@@ -2185,7 +2185,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "11:30",
+      "Hora": "08:30",
       "Liga": "Bundesliga",
       "Casa": "Holstein Kiel",
       "Visitante": "Preu\u00dfen M\u00fcnster",
@@ -2205,7 +2205,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "11:30",
+      "Hora": "08:30",
       "Liga": "2. Bundesliga",
       "Casa": "Schalke 04",
       "Visitante": "Karlsruher SC",
@@ -2225,7 +2225,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "11:30",
+      "Hora": "08:30",
       "Liga": "Super Lig",
       "Casa": "Samsunspor",
       "Visitante": "Konyaspor",
@@ -2245,7 +2245,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "11:30",
+      "Hora": "08:30",
       "Liga": "Brasileirao B",
       "Casa": "Sporting Delhi",
       "Visitante": "Kerala Blasters",
@@ -2265,7 +2265,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "11:30",
+      "Hora": "08:30",
       "Liga": "2. Bundesliga",
       "Casa": "Ulm",
       "Visitante": "Verl",
@@ -2285,7 +2285,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "11:30",
+      "Hora": "08:30",
       "Liga": "2. Bundesliga",
       "Casa": "Eintracht Braunschweig",
       "Visitante": "N\u00fcrnberg",
@@ -2305,7 +2305,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "11:30",
+      "Hora": "08:30",
       "Liga": "Super Lig",
       "Casa": "Fatih Karag\u00fcmr\u00fck",
       "Visitante": "Rizespor",
@@ -2325,7 +2325,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "11:30",
+      "Hora": "08:30",
       "Liga": "2. Bundesliga",
       "Casa": "Hannover 96",
       "Visitante": "Elversberg",
@@ -2345,7 +2345,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "11:30",
+      "Hora": "08:30",
       "Liga": "2. Bundesliga",
       "Casa": "Greuther F\u00fcrth",
       "Visitante": "Paderborn",
@@ -2365,7 +2365,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "12:00",
+      "Hora": "09:00",
       "Liga": "Segunda Division",
       "Casa": "SD Eibar",
       "Visitante": "Ceuta",
@@ -2385,7 +2385,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "12:00",
+      "Hora": "09:00",
       "Liga": "Allsvenskan",
       "Casa": "AIK",
       "Visitante": "Halmstad",
@@ -2405,7 +2405,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "12:00",
+      "Hora": "09:00",
       "Liga": "La Liga",
       "Casa": "Getafe CF",
       "Visitante": "Athletic Club Bilbao",
@@ -2425,7 +2425,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "12:30",
+      "Hora": "09:30",
       "Liga": "Eredivisie",
       "Casa": "Heerenveen",
       "Visitante": "Heracles",
@@ -2445,7 +2445,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "12:30",
+      "Hora": "09:30",
       "Liga": "Eerste Divisie",
       "Casa": "Volendam",
       "Visitante": "Feyenoord",
@@ -2465,7 +2465,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "13:00",
+      "Hora": "10:00",
       "Liga": "Serie B",
       "Casa": "Cremonese",
       "Visitante": "Bologna",
@@ -2485,7 +2485,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "13:00",
+      "Hora": "10:00",
       "Liga": "League One",
       "Casa": "Albion",
       "Visitante": "Cerro Largo",
@@ -2505,7 +2505,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "13:00",
+      "Hora": "10:00",
       "Liga": "Ligue 1",
       "Casa": "Angers SCO",
       "Visitante": "Olympique Lyonnais",
@@ -2525,7 +2525,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "13:00",
+      "Hora": "10:00",
       "Liga": "Super Lig",
       "Casa": "Sivasspor",
       "Visitante": "Erokspor",
@@ -2545,7 +2545,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "13:00",
+      "Hora": "10:00",
       "Liga": "Premiership",
       "Casa": "Livingston",
       "Visitante": "Hearts",
@@ -2565,7 +2565,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "13:00",
+      "Hora": "10:00",
       "Liga": "Premier League",
       "Casa": "Arsenal Tula",
       "Visitante": "Fakel",
@@ -2585,7 +2585,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "13:30",
+      "Hora": "10:30",
       "Liga": "Bundesliga",
       "Casa": "Union Berlin",
       "Visitante": "St. Pauli",
@@ -2605,7 +2605,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Pro League",
       "Casa": "RFC Liege",
       "Visitante": "Olympic Charleroi",
@@ -2625,7 +2625,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Super Lig",
       "Casa": "Antalyaspor",
       "Visitante": "Ey\u00fcpspor",
@@ -2645,7 +2645,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Ligue 1",
       "Casa": "Levadiakos",
       "Visitante": "Aris",
@@ -2665,7 +2665,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Bundesliga",
       "Casa": "KuPS Akatemia",
       "Visitante": "OLS",
@@ -2685,7 +2685,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "14:00",
+      "Hora": "11:00",
       "Liga": "Ligue 1",
       "Casa": "APOEL",
       "Visitante": "Aris",
@@ -2705,7 +2705,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "14:15",
+      "Hora": "11:15",
       "Liga": "Segunda Division",
       "Casa": "FC Andorra",
       "Visitante": "Racing Santander",
@@ -2725,7 +2725,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "14:15",
+      "Hora": "11:15",
       "Liga": "La Liga",
       "Casa": "Valencia CF",
       "Visitante": "Celta de Vigo",
@@ -2745,7 +2745,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "14:30",
+      "Hora": "11:30",
       "Liga": "Allsvenskan",
       "Casa": "\u00d6rgryte",
       "Visitante": "Malm\u00f6 FF",
@@ -2765,7 +2765,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "14:45",
+      "Hora": "11:45",
       "Liga": "Eredivisie",
       "Casa": "NAC Breda",
       "Visitante": "Sparta Rotterdam",
@@ -2785,7 +2785,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "15:00",
+      "Hora": "12:00",
       "Liga": "Ligue 2",
       "Casa": "Radnik Surdulica",
       "Visitante": "Red Star Belgrade",
@@ -2805,7 +2805,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "15:15",
+      "Hora": "12:15",
       "Liga": "Serie B",
       "Casa": "Frosinone",
       "Visitante": "Calcio Padova",
@@ -2825,7 +2825,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "15:15",
+      "Hora": "12:15",
       "Liga": "Ligue 2",
       "Casa": "Metz",
       "Visitante": "Nantes",
@@ -2845,7 +2845,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "15:15",
+      "Hora": "12:15",
       "Liga": "Ligue 1",
       "Casa": "Lorient",
       "Visitante": "Paris",
@@ -2865,7 +2865,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "15:15",
+      "Hora": "12:15",
       "Liga": "Ligue 1",
       "Casa": "Le Havre",
       "Visitante": "Auxerre",
@@ -2885,7 +2885,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "15:30",
+      "Hora": "12:30",
       "Liga": "Premiership",
       "Casa": "Dundee",
       "Visitante": "Celtic",
@@ -2905,7 +2905,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "15:30",
+      "Hora": "12:30",
       "Liga": "Premier League",
       "Casa": "West Ham United",
       "Visitante": "Leeds United",
@@ -2925,7 +2925,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "15:30",
+      "Hora": "12:30",
       "Liga": "Bundesliga",
       "Casa": "Eintracht Frankfurt",
       "Visitante": "K\u00f6ln",
@@ -2945,7 +2945,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "16:00",
+      "Hora": "13:00",
       "Liga": "Allsvenskan",
       "Casa": "PAOK",
       "Visitante": "Panathinaikos",
@@ -2965,7 +2965,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "16:00",
+      "Hora": "13:00",
       "Liga": "Serie B",
       "Casa": "Pisa",
       "Visitante": "Torino",
@@ -2985,7 +2985,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "16:30",
+      "Hora": "13:30",
       "Liga": "Segunda Division",
       "Casa": "Almer\u00eda",
       "Visitante": "Legan\u00e9s",
@@ -3005,7 +3005,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "16:30",
+      "Hora": "13:30",
       "Liga": "Segunda Division",
       "Casa": "Real Oviedo",
       "Visitante": "Sevilla FC",
@@ -3025,7 +3025,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "16:30",
+      "Hora": "13:30",
       "Liga": "Pro League",
       "Casa": "KVC Westerlo",
       "Visitante": "Sporting Charleroi",
@@ -3045,7 +3045,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "16:30",
+      "Hora": "13:30",
       "Liga": "La Liga",
       "Casa": "UD Las Palmas",
       "Visitante": "SD Huesca",
@@ -3065,7 +3065,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "17:00",
+      "Hora": "14:00",
       "Liga": "Super Lig",
       "Casa": "Fenerbah\u00e7e",
       "Visitante": "Be\u015fikta\u015f",
@@ -3085,7 +3085,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "17:30",
+      "Hora": "14:30",
       "Liga": "Serie B",
       "Casa": "Palermo",
       "Visitante": "Avellino",
@@ -3105,7 +3105,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "18:15",
+      "Hora": "15:15",
       "Liga": "Brasileirao B",
       "Casa": "Sport Huancayo",
       "Visitante": "Comerciantes Unidos",
@@ -3125,7 +3125,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "18:30",
+      "Hora": "15:30",
       "Liga": "Brasileirao B",
       "Casa": "Dock Sud",
       "Visitante": "Sportivo Italiano",
@@ -3145,7 +3145,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "18:30",
+      "Hora": "15:30",
       "Liga": "Brasileirao B",
       "Casa": "Cerro",
       "Visitante": "Defensor Sporting",
@@ -3165,7 +3165,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "18:45",
+      "Hora": "15:45",
       "Liga": "Ligue 1",
       "Casa": "Monaco",
       "Visitante": "Olympique Marseille",
@@ -3185,7 +3185,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "18:45",
+      "Hora": "15:45",
       "Liga": "Serie A",
       "Casa": "Inter Milan",
       "Visitante": "Roma",
@@ -3205,7 +3205,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Segunda Division",
       "Casa": "Real Zaragoza",
       "Visitante": "Mirand\u00e9s",
@@ -3225,7 +3225,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Brasileirao B",
       "Casa": "Sportivo Las Parejas",
       "Visitante": "9 de Julio Rafaela",
@@ -3245,7 +3245,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Argentina",
       "Casa": "Independiente Chivilcoy",
       "Visitante": "Gimnasia Chivilcoy",
@@ -3265,7 +3265,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Argentina",
       "Casa": "Marc\u00edlio Dias",
       "Visitante": "Independiente FSJ",
@@ -3285,7 +3285,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Brasileirao B",
       "Casa": "Chapecoense",
       "Visitante": "Vit\u00f3ria",
@@ -3305,7 +3305,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "La Liga",
       "Casa": "Deportivo Alav\u00e9s",
       "Visitante": "CA Osasuna",
@@ -3325,7 +3325,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "19:00",
+      "Hora": "16:00",
       "Liga": "Brasileirao B",
       "Casa": "Ava\u00ed",
       "Visitante": "Oper\u00e1rio PR",
@@ -3345,7 +3345,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "20:00",
+      "Hora": "17:00",
       "Liga": "Brasileirao B",
       "Casa": "CEOV Oper\u00e1rio",
       "Visitante": "Goiatuba EC",
@@ -3365,7 +3365,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "20:00",
+      "Hora": "17:00",
       "Liga": "Brasileirao B",
       "Casa": "Oper\u00e1rio MT",
       "Visitante": "Betim",
@@ -3385,7 +3385,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "20:30",
+      "Hora": "17:30",
       "Liga": "Brasileirao A",
       "Casa": "Flamengo",
       "Visitante": "Santos",
@@ -3405,7 +3405,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "20:30",
+      "Hora": "17:30",
       "Liga": "Brasileirao A",
       "Casa": "Atl\u00e9tico Mineiro",
       "Visitante": "Atl\u00e9tico PR",
@@ -3425,7 +3425,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "21:00",
+      "Hora": "18:00",
       "Liga": "Argentina",
       "Casa": "River Plate",
       "Visitante": "Belgrano",
@@ -3445,7 +3445,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "21:00",
+      "Hora": "18:00",
       "Liga": "Argentina",
       "Casa": "Uni\u00f3n Cocl\u00e9",
       "Visitante": "CA Independiente de La Chorrera",
@@ -3465,7 +3465,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "21:00",
+      "Hora": "18:00",
       "Liga": "Colombia",
       "Casa": "C\u00facuta Deportivo",
       "Visitante": "Am\u00e9rica de Cali",
@@ -3485,7 +3485,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "21:00",
+      "Hora": "18:00",
       "Liga": "Argentina",
       "Casa": "Estudiantes M\u00e9rida",
       "Visitante": "Portuguesa",
@@ -3505,7 +3505,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "21:00",
+      "Hora": "18:00",
       "Liga": "Brasileirao B",
       "Casa": "Novorizontino",
       "Visitante": "CRB",
@@ -3525,7 +3525,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "21:30",
+      "Hora": "18:30",
       "Liga": "Premier League",
       "Casa": "Liverpool FC Montevideo",
       "Visitante": "Deportivo Maldonado",
@@ -3545,7 +3545,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "21:30",
+      "Hora": "18:30",
       "Liga": "Brasileirao B",
       "Casa": "Sportivo Ameliano",
       "Visitante": "Sportivo Luque\u00f1o",
@@ -3565,7 +3565,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "22:30",
+      "Hora": "19:30",
       "Liga": "Brasileirao A",
       "Casa": "Corinthians",
       "Visitante": "Internacional",
@@ -3585,7 +3585,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "22:30",
+      "Hora": "19:30",
       "Liga": "Brasileirao A",
       "Casa": "Bahia",
       "Visitante": "Palmeiras",
@@ -3605,7 +3605,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "23:00",
+      "Hora": "20:00",
       "Liga": "La Liga",
       "Casa": "Athletic Club",
       "Visitante": "Am\u00e9rica Mineiro",
@@ -3625,7 +3625,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "23:00",
+      "Hora": "20:00",
       "Liga": "Brasileirao B",
       "Casa": "Mirassol",
       "Visitante": "Bragantino",
@@ -3645,7 +3645,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "23:15",
+      "Hora": "20:15",
       "Liga": "Brasileirao B",
       "Casa": "\u00c1rabe Unido",
       "Visitante": "Sporting San Miguelito",
@@ -3665,7 +3665,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "23:30",
+      "Hora": "20:30",
       "Liga": "Brasileirao A",
       "Casa": "Gr\u00eamio",
       "Visitante": "Remo",
@@ -3685,7 +3685,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "23:30",
+      "Hora": "20:30",
       "Liga": "Brasileirao A",
       "Casa": "Botafogo SP",
       "Visitante": "S\u00e3o Bernardo",
@@ -3705,7 +3705,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "23:30",
+      "Hora": "20:30",
       "Liga": "Brasileirao B",
       "Casa": "Sportivo Belgrano",
       "Visitante": "Gimnasia Concepci\u00f3n",
@@ -3725,7 +3725,7 @@
     },
     {
       "Data": "2026-04-05",
-      "Hora": "23:30",
+      "Hora": "20:30",
       "Liga": "Brasileirao B",
       "Casa": "Guaran\u00ed",
       "Visitante": "Libertad",

@@ -17,8 +17,9 @@ def hora_str(h):
     try:
         ts = float(h)
         if ts > 1_000_000_000:
-            from datetime import timezone
-            return datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%H:%M")
+            from datetime import timezone, timedelta
+            tz_br = timezone(timedelta(hours=-3))
+            return datetime.fromtimestamp(ts, tz=tz_br).strftime("%H:%M")
         return str(h)[:5]
     except:
         return str(h)[:5]
