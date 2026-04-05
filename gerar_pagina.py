@@ -26,13 +26,29 @@ ARQUIVO_HTML   = PASTA_DOCS / "index.html"
 ARQUIVO_JSON   = PASTA_DOCS / "sinais.json"
 
 
+def _hora_legivel(h):
+    """Converte timestamp Unix ou string para HH:MM."""
+    if h is None:
+        return ""
+    try:
+        ts = float(h)
+        if ts > 1_000_000_000:  # timestamp Unix
+            return datetime.utcfromtimestamp(ts).strftime("%H:%M")
+        return str(h)[:5]
+    except:
+        return str(h)[:5]
+
+
 def carregar_sinais() -> list:
     if not os.path.exists(ARQUIVO_SINAIS):
         return []
     df = pd.read_excel(ARQUIVO_SINAIS)
     df = df.where(pd.notnull(df), None)
     sinais = df.to_dict("records")
-    sinais.sort(key=lambda r: (str(r.get("Data") or ""), str(r.get("Hora") or "")[:5]))
+    # Converter campo Hora de timestamp Unix para HH:MM
+    for s in sinais:
+        s["Hora"] = _hora_legivel(s.get("Hora"))
+    sinais.sort(key=lambda r: (str(r.get("Data") or ""), str(r.get("Hora") or "")))
     return sinais
 
 
@@ -47,7 +63,7 @@ def gerar_html(payload: dict) -> str:
     total    = payload["total"]
     n_apto   = payload["n_apto"]
     sinais   = payload["sinais"]
-    json_str = json.dumps(payload, ensure_ascii=False, default=str)
+    json_str = json.dumps(payload, ensure_ascii=False, default=str).replace("</", "<\\/")
     ligas    = sorted(set(s.get("Liga","?") for s in sinais if s.get("Liga")))
     opts     = "\n".join(f'<option value="{l}">{l}</option>' for l in ligas)
     hoje     = datetime.now().strftime("%d/%m/%Y")
